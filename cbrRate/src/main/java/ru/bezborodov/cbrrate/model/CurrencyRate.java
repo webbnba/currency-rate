@@ -1,11 +1,12 @@
 package ru.bezborodov.cbrrate.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Value;
 
+@AllArgsConstructor(onConstructor = @__(@JsonCreator))
 @Value
-@AllArgsConstructor
 @Builder
 public class CurrencyRate {
     String numCode;

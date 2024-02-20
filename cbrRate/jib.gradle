@@ -1,0 +1,18 @@
+jib {
+    from {
+        image = 'bellsoft/liberica-openjdk-alpine-musl:17.0.1-12'
+    }
+    to {
+        image = 'docker.io/webbnba/cbr-rate'
+        tags = ['v1', 'latest']
+    }
+    container {
+        creationTime = 'USE_CURRENT_TIMESTAMP'
+    }
+}
+// ./gradlew jibDockerBuild
+
+//docker login registry.gitlab.com
+//docker run -p 8080:8080 registry.gitlab.com/petrelevich/dockerregistry/cbr-rate
+
+//docker push registry.gitlab.com/petrelevich/dockerregistry/cbr-rate:latest

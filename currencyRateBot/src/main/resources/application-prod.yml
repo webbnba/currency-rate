@@ -1,0 +1,2 @@
+currency-rate-client:
+  url: "http://currency-rate-client.default.svc.cluster.local/api/v1/currencyRate"

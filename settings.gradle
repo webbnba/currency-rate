@@ -1,4 +1,5 @@
 rootProject.name = 'currency-rate'
 include 'cbrRate'
 include 'currancyRateClient'
+include 'currencyRateBot'
 

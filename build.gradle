@@ -2,6 +2,7 @@ plugins {
     id 'idea'
     id 'org.springframework.boot' version '3.2.0' apply false
     id 'io.spring.dependency-management' version '1.1.4'
+    id 'com.google.cloud.tools.jib' version '3.4.0' apply false
 }
 
 idea {
@@ -15,7 +16,7 @@ idea {
 }
 
 allprojects {
-    group "ru.bezborodov"
+    group "ru.bezborodov.cbrrate"
 
     repositories {
         mavenCentral()

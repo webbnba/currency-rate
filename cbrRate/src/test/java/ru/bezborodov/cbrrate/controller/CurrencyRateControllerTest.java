@@ -27,9 +27,9 @@ import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.request;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
+@SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
 @WebMvcTest(CurrencyRateController.class)
 @Import({ApplicationConfig.class, JsonConfig.class, CurrencyRateService.class, CurrencyRateParserXml.class})
 class CurrencyRateControllerTest {
@@ -38,7 +38,7 @@ class CurrencyRateControllerTest {
     private static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern(DATE_FORMAT);
 
     @Autowired
-    MockMvc mockMvc;
+    private MockMvc mockMvc;
 
     @Autowired
     CbrConfig cbrConfig;

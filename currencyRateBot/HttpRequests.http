@@ -1,0 +1,43 @@
+###
+POST https://api.telegram.org/bot[token]/getUpdates
+Accept: */*
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "offset": 953141
+}
+
+###
+POST https://api.telegram.org/bot[token]/sendMessage
+Accept: */*
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "chat_id": "3445742",
+  "text": "testOk",
+  "reply_to_message_id": 2
+}
+
+###
+POST https://api.telegram.org/bot6961879738:AAFJVmL7PE4Nb9AImSN55fkueZyC4x9DFEI/getUpdates
+Accept: */*
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "offset":10
+}
+
+###
+POST https://api.telegram.org/bot6961879738:AAFJVmL7PE4Nb9AImSN55fkueZyC4x9DFEI/sendMessage
+Accept: */*
+Content-Type: application/json
+Cache-Control: no-cache
+
+{
+  "chat_id": "3445742",
+  "text": "testOk",
+  "reply_to_message_id": 2
+}

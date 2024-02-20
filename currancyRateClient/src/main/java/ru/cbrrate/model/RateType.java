@@ -3,7 +3,7 @@ package ru.cbrrate.model;
 public enum RateType {
     CBR("cbr");
 
-    String serviceName;
+    final String serviceName;
 
     RateType(String serviceName) {this.serviceName = serviceName;}
 

@@ -1,0 +1,49 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: currency-rate-bot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: currency-rate-bot
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: currency-rate-bot
+    spec:
+      containers:
+        - image: docker.io/webbnba/currency-rate-bot:v1
+          name: currency-rate-bot
+          ports:
+            - containerPort: 8082
+          envFrom:
+            - configMapRef:
+                name: currency-rate-config
+            - secretRef:
+                name: secret-currency-rate-config
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /actuator/health/readiness
+              port: 8092
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+          livenessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: /actuator/health/liveness
+              port: 8092
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 1
+            initialDelaySeconds: 10
+      imagePullSecrets:
+        - name: regcred

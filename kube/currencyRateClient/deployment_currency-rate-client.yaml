@@ -19,7 +19,7 @@ spec:
         app: currency-rate-client
     spec:
       containers:
-        - image: docker.io/webbnba/currency-rate-client:v1
+        - image: webbnba/currency-rate-client:v1
           name: currency-rate-client
           ports:
             - containerPort: 8080
@@ -43,5 +43,4 @@ spec:
             successThreshold: 1
             timeoutSeconds: 1
             initialDelaySeconds: 10
-      imagePullSecrets:
-        - name: regcred
+

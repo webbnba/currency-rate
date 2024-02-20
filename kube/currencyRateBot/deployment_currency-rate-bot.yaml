@@ -19,7 +19,7 @@ spec:
         app: currency-rate-bot
     spec:
       containers:
-        - image: docker.io/webbnba/currency-rate-bot:v1
+        - image: webbnba/currency-rate-bot:v1
           name: currency-rate-bot
           ports:
             - containerPort: 8082
@@ -45,5 +45,4 @@ spec:
             successThreshold: 1
             timeoutSeconds: 1
             initialDelaySeconds: 10
-      imagePullSecrets:
-        - name: regcred
+

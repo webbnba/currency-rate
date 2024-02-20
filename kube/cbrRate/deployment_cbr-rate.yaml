@@ -19,7 +19,7 @@ spec:
         app: cbr-rate
     spec:
       containers:
-        - image: docker.io/webbnba/cbr-rate:v1
+        - image: webbnba/cbr-rate:v2
           name: cbr-rate
           ports:
             - containerPort: 8081
@@ -43,5 +43,4 @@ spec:
             successThreshold: 1
             timeoutSeconds: 1
             initialDelaySeconds: 10
-      imagePullSecrets:
-        - name: regcred
+

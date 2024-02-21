@@ -19,7 +19,7 @@ spec:
         app: currency-rate-client
     spec:
       containers:
-        - image: webbnba/currency-rate-client:v1
+        - image: webbnba/currency-rate-client:v2
           name: currency-rate-client
           ports:
             - containerPort: 8080

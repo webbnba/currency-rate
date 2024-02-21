@@ -4,7 +4,7 @@ jib {
     }
     to {
         image = 'docker.io/webbnba/currency-rate-client'
-        tags = ['v1', 'latest']
+        tags = ['v2', 'latest']
     }
     container {
         creationTime = 'USE_CURRENT_TIMESTAMP'

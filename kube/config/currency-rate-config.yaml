@@ -6,3 +6,4 @@ metadata:
 data:
   SPRING_PROFILES_ACTIVE: prod
   JAVA_TOOL_OPTIONS: -XX:+UseContainerSupport -XX:MaxRAMPercentage=80
+  TELEGRAM_TOKEN: 6722860985:AAGYd-57jLuxwR88jKRL66XgzzLWHHy6O-U

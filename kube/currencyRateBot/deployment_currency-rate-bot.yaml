@@ -26,8 +26,6 @@ spec:
           envFrom:
             - configMapRef:
                 name: currency-rate-config
-            - secretRef:
-                name: secret-currency-rate-config
           readinessProbe:
             failureThreshold: 3
             httpGet:
